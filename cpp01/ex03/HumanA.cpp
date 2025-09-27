@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 18:04:50 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/27 18:26:43 by miparis          ###   ########.fr       */
+/*   Updated: 2025/09/27 19:40:17 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	HumanA::attack()
 {
-	std::cout << this->name << "attacks with their " << this->weapon.getType() << std::endl;
+	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
 }

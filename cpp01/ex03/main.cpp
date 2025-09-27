@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 18:00:38 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/20 19:09:24 by miparis          ###   ########.fr       */
+/*   Updated: 2025/09/27 19:42:35 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int main()
 {
+	//se estan imprimiendo la misma armas para las dos personas, no diferencia el settype de weapon
     {
       Weapon club = Weapon("crude spiked club");
       HumanA bob("Bob", club);
