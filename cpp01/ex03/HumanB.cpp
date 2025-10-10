@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 18:04:41 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/27 19:40:21 by miparis          ###   ########.fr       */
+/*   Updated: 2025/10/10 17:10:12 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	HumanB::attack()
 {
-	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
+	if (weapon)
+		std::cout << this->name << " attacks with their " <<  weapon->getType() << std::endl;
+	else
+		std::cout << this->name << " doesn't have a weapon X0" <<  std::endl;
 }
-void	HumanB::setWeapon(Weapon weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	this->weapon = weapon;
+	this->weapon = &weapon;
 }

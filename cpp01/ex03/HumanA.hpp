@@ -6,29 +6,23 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 18:04:44 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/27 19:39:31 by miparis          ###   ########.fr       */
+/*   Updated: 2025/10/10 17:51:36 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 #ifndef HUMAN_A
-#define HUMAN_A
 
 class HumanA
 {
 	public:
 	void	attack();
-	HumanA(){};
-	HumanA(std::string name, Weapon weapon)
-	{
-		this->name = name;
-		this->weapon = weapon;
-	}
-
+	HumanA(const std::string &name, Weapon &weapon)
+        : name(name), weapon(weapon) {} //We assign at the moment of constructor, it cannot be empty
 	private:
 	std::string	name;
-	Weapon weapon;
+	Weapon &weapon;
 };
 
 #endif

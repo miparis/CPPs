@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 18:00:38 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/27 19:42:35 by miparis          ###   ########.fr       */
+/*   Updated: 2025/10/10 17:54:05 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ int main()
       jim.attack();
       club.setType("some other type of club");
       jim.attack();
+    }
+	{
+      HumanB sand("Sand");
+      sand.attack();
+    }
+	{
+      Weapon sandwich;
+      HumanB marlon("marlon");
+      marlon.setWeapon(sandwich);
+      marlon.attack();
     }
     return 0;
 }
