@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 11:26:04 by miparis           #+#    #+#             */
-/*   Updated: 2025/08/26 10:22:03 by miparis          ###   ########.fr       */
+/*   Updated: 2025/10/18 11:34:36 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class PhoneBook
 	public:
 		//We can access the contact count from the class only
 		PhoneBook() : contact_count(0){} //Default Constructor to  avoid garbage values inside
-		void AddContact();
+		void	AddContact();
 		bool	CheckIfEmpty(std::string& input);
-		void SearchContact();
+		void	SearchContact();
 };
 
 #endif
