@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 16:01:37 by miparis           #+#    #+#             */
-/*   Updated: 2025/09/20 18:09:45 by miparis          ###   ########.fr       */
+/*   Updated: 2025/10/18 11:51:23 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ class Megaphone
 {
 	public:
 	std:: string input;
-	std:: string return_input;
 
 	std::string ConcatInput(char **argv);
 	void Capitalize(std::string &input);
-	void phraseReturn(char **argv);
+	void PhraseReturn(char **argv);
 };
 
 std::string Megaphone:: ConcatInput(char **argv)
@@ -45,10 +44,11 @@ void Megaphone::Capitalize(std::string &input)
 		input[i] = toupper(input[i]);
 }
 
-void Megaphone:: phraseReturn(char **argv)
+void Megaphone:: PhraseReturn(char **argv)
 {
 	ConcatInput(argv);
 	Capitalize(input);
+	std::cout << input;
 }
 
 int main(int argc, char **argv)
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 	if (argc < 2)
 		std:: cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
-		phrase.phraseReturn(argv);
+		phrase.PhraseReturn(argv);
 	std:: cout << std::endl;
 	return (0);
 }
