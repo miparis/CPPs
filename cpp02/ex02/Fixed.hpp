@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 16:04:02 by miparis           #+#    #+#             */
-/*   Updated: 2025/11/22 15:12:23 by miparis          ###   ########.fr       */
+/*   Updated: 2025/11/22 15:55:08 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,23 +39,28 @@ class Fixed
 	float toFloat( void ) const;
 	int toInt( void ) const;
 	/*Overload of operators*/
-	Fixed Fixed::operator+(const Fixed& _arg) const;
-	Fixed Fixed::operator-(const Fixed& _arg) const;
-	Fixed Fixed::operator*(const Fixed& _arg) const;
-	Fixed Fixed::operator/(const Fixed& _arg) const;
+	Fixed operator+(const Fixed& _arg) const;
+	Fixed operator-(const Fixed& _arg) const;
+	Fixed operator*(const Fixed& _arg) const;
+	Fixed operator/(const Fixed& _arg) const;
 
-	bool Fixed::operator>(const Fixed& _arg) const;
-	bool Fixed::operator<(const Fixed& _arg) const;
-	bool Fixed::operator<=(const Fixed& _arg) const;
-	bool Fixed::operator>=(const Fixed& _arg) const;
-	bool Fixed::operator==(const Fixed& _arg) const;
-	bool Fixed::operator!=(const Fixed& _arg) const;
+	bool operator>(const Fixed& _arg) const;
+	bool operator<(const Fixed& _arg) const;
+	bool operator<=(const Fixed& _arg) const;
+	bool operator>=(const Fixed& _arg) const;
+	bool operator==(const Fixed& _arg) const;
+	bool operator!=(const Fixed& _arg) const;
 	
-	Fixed& Fixed::operator++();
-	Fixed& Fixed::operator--();
-	Fixed& Fixed::operator++(int); //Post increment
-	Fixed& Fixed::operator--(int);  //Post decrement
+	Fixed& operator++();
+	Fixed& operator--();
+	Fixed operator++(int); //Post increment
+	Fixed operator--(int);  //Post decrement
+	
 	/*Overload functions*/
+	static const Fixed& min(Fixed& _a,  Fixed& _b);
+	static const Fixed& min(const Fixed& _a, const Fixed& _b);
+	static const Fixed& max(Fixed& _a,  Fixed& _b);
+	static const Fixed& max(const Fixed& _a, const Fixed& _b);
 
 	
 	private:
