@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 16:04:38 by miparis           #+#    #+#             */
-/*   Updated: 2025/11/22 19:01:20 by miparis          ###   ########.fr       */
+/*   Updated: 2025/11/29 12:24:31 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,13 +115,11 @@ bool Fixed::operator>(const Fixed& _arg) const
 bool Fixed::operator<(const Fixed& _arg) const
 {
 	return (this->_fixed < _arg._fixed);
-
 }
 
 bool Fixed::operator<=(const Fixed& _arg) const
 {
 	return (this->_fixed <= _arg._fixed);
-
 }
 
 bool Fixed::operator>=(const Fixed& _arg) const
