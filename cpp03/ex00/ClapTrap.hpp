@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:16 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/27 09:24:04 by miparis          ###   ########.fr       */
+/*   Updated: 2026/01/28 09:56:54 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class ClapTrap
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	void status(void) const;
 
 	private:
 	std::string _name; //, which is passed as a parameter to the constructor

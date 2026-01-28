@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:13 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/28 09:50:06 by miparis          ###   ########.fr       */
+/*   Updated: 2026/01/28 09:56:43 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << PURPLE << "ClapTrap" << this->_name << " No energy points left!" << NC << std::endl;
+}
+
+void ClapTrap::status(void) const {
+    std::cout << "\n" << "--- [ STATUS: " << PURPLE << _name << NC << " ] ---" << std::endl;
+    std::cout << "| " << GREEN  << "HP: " << _hitPoints << NC;
+    std::cout << " | " << YELLOW << "EP: " << _energyPoints << NC;
+    std::cout << " | " << RED    << "AD: " << _attackDamage << NC << " |" << std::endl;
+    std::cout << "-----------------------" << "\n" << std::endl;
 }
