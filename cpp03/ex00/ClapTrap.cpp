@@ -6,14 +6,14 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:13 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/28 17:33:25 by miparis          ###   ########.fr       */
+/*   Updated: 2026/01/29 09:36:15 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap (std::string _name): _name(_name), _hitPoints(10), _energyPoints(10), _attackDamage(0){
-	std::cout << PURPLE << "ClapTrap" << this->_name << " ready!" << NC << std::endl;
+	std::cout << PURPLE << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
 	std::cout << GREEN << "Hit = " << this->_hitPoints << NC << std::endl;
 	std::cout << YELLOW << "Energy = " << this->_energyPoints << NC << std::endl;
 	std::cout << RED << "Damage = " << this->_attackDamage << NC << std::endl;

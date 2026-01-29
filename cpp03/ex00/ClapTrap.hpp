@@ -6,16 +6,15 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:16 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/28 09:56:54 by miparis          ###   ########.fr       */
+/*   Updated: 2026/01/29 09:21:49 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef FIXED_H
-#define FIXED_H
+#ifndef CLAPTRAP_H
+#define CLAPTRAP_H
 
 #include <iostream>
-#include <cmath>
 
 const std::string GREEN  = "\033[0;32m";
 const std::string YELLOW = "\033[0;33m";
