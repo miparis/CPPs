@@ -6,16 +6,47 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:13 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/29 09:36:05 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 18:36:18 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap:: ClapTrap()
+{
+	this->_name = "_default";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+	std::cout << PURPLE << "(Default const.) " << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
+	status();
+}
+
 ClapTrap::ClapTrap (std::string _name): _name(_name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << PURPLE << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
+	std::cout << PURPLE << "(Default const.) " << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
 	status();
+}
+
+ClapTrap::ClapTrap (const ClapTrap& _copy)
+{
+	std::cout << PURPLE << "(Copy const.) " << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
+	*this = _copy;
+	status();
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& _copy)
+{
+	if (this != &_copy)
+	{
+		this->_name = _copy._name;
+		this->_hitPoints = _copy._hitPoints;
+		this->_energyPoints = _copy._energyPoints;
+		this->_attackDamage = _copy._attackDamage;
+	}
+	std::cout << PURPLE << "(Copy assigment const) " << "ClapTrap " << this->_name << " ready!" << NC << std::endl;
+	status();
+	return (*this);
 }
 
 ClapTrap:: ~ClapTrap (void)
@@ -41,7 +72,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 		this->_hitPoints -= amount;
 	}
 	else
+	{
 		std::cout << YELLOW << "ClapTrap " << this->_name << " No hit points left to keep standing! Hit points = " << this->_hitPoints << NC << std::endl;
+		this->_hitPoints = 0;
+	}
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {

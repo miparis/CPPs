@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/01 17:06:48 by miparis           #+#    #+#             */
+/*   Updated: 2026/02/01 18:08:30 by miparis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FRAGTRAP_H
+#define FRAGTRAP_H
+
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
+{
+	public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap& _copy);
+	FragTrap& operator=(const FragTrap& _copy);
+	~FragTrap(void);
+	void highFivesGuys(void);
+};
+
+#endif

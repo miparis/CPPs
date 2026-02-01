@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:19 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/29 09:39:00 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 18:33:30 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,43 @@
 
 int main()
 {
-	std::cout << "--- Create ---" << std::endl;
-	ClapTrap _mario("_mario");
-	ClapTrap _warrio("_warrio");
-	_mario.status();
-	_warrio.status();
+	std::cout << GREEN << "--- Orthodox Canonical Form ---" << NC << std::endl;
+	std::cout << "--- Testing Default Constructor ---" << std::endl;
+	ClapTrap defaultBot;
+	defaultBot.status();
 
-	std::cout << "---  Use all energy ---" << std::endl;
+	std::cout << "\n--- Testing Parameterized Constructor ---" << std::endl;
+	ClapTrap clappy("Clappy");
+	clappy.status();
+
+	std::cout << "\n--- Testing Copy Constructor ---" << std::endl;
+	ClapTrap clone(clappy);
+	clone.status();
+
+	std::cout << "\n--- Testing Copy Assignment Operator ---" << std::endl;
+	defaultBot = clappy;
+	defaultBot.status();
+
+	std::cout << GREEN << "--- Methods ---" << NC << std::endl;
+	ClapTrap _clapper("_Clappy");
+
+	_clapper.attack("Target A");
+	_clapper.takeDamage(5);
+	_clapper.beRepaired(3);
+
+	// Testing energy depletion
 	for (int i = 0; i < 10; i++)
-		_mario.attack("a Goomba");
-	_mario.status();
+	{
+		_clapper.attack("Target B");
+		_clapper.status();
+	}
 
-	std::cout << "--- Failed actions ---" << std::endl;
-	_mario.attack("a Goomba");
-	_mario.beRepaired(5);
-	_mario.status();
+	_clapper.beRepaired(5); // Should fail: No energy
+	_clapper.status();
+	_clapper.takeDamage(20); // Should die
+	_clapper.status();
+	_clapper.attack("Targe C"); // Should fail: No HP
 
-	std::cout << "--- Dead because of points ---" << std::endl;
-	_warrio.status();
-	_warrio.takeDamage(10);
-	_warrio.status();
-
-	std::cout << "--- Post-mortem ---" << std::endl;
-	_warrio.attack("_mario");
-	_warrio.beRepaired(10);
-	_warrio.status();
-
-	return 0;
+	return (0);
 }
+

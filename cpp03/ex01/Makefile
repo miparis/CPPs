@@ -6,18 +6,18 @@
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/27 09:15:28 by miparis           #+#    #+#              #
-#    Updated: 2026/01/29 09:16:11 by miparis          ###   ########.fr        #
+#    Updated: 2026/02/01 17:38:36 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 SRCS =  main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp
-
+		ScavTrap.cpp \
+		
 # Define Colors
 GREEN  := \033[1;32m  # Bold Green
 YELLOW := \033[0;33m  # Non-bold Yellow

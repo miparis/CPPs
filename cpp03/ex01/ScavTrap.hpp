@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:17:53 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/29 09:23:29 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 18:06:00 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+	ScavTrap();
 	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap& _copy);
+	ScavTrap& operator=(const ScavTrap& _copy);
 	~ScavTrap(void);
 
-	void attack(const std::string& target); // Sobrescribir
-	void guardGate();// Nuevo método único
+	void attack(const std::string& target);
+	void guardGate();
 };
 
 #endif

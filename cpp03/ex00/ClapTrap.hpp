@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:17:16 by miparis           #+#    #+#             */
-/*   Updated: 2026/01/29 09:21:49 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 17:59:07 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ class ClapTrap
 {
 
 	public:
+	ClapTrap();
 	ClapTrap(std::string _name);
+	ClapTrap(const ClapTrap& _copy);
+	ClapTrap& operator=(const ClapTrap& _copy);
 	~ClapTrap(void);
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
@@ -36,10 +39,10 @@ class ClapTrap
 	void status(void) const;
 
 	private:
-	std::string _name; //, which is passed as a parameter to the constructor
-	int	_hitPoints; // (10), representing the health of the ClapTrap
-	int	_energyPoints;//  (10)
-	int	_attackDamage; // (0)
+	std::string _name;
+	int	_hitPoints;
+	int	_energyPoints;
+	int	_attackDamage;
 };
 
 #endif
