@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:45 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/01 18:48:35 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 18:56:29 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ FragTrap:: FragTrap() : ClapTrap()
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
-	std::cout << PURPLE << "(Default const.) " << "ScavTrap " << this->_name << " ready!" << NC << std::endl;
+	std::cout << PURPLE << "(Default const.) " << "FragTrap " << this->_name << " ready!" << NC << std::endl;
 	status();
 }
 
@@ -54,4 +54,15 @@ FragTrap:: ~FragTrap(void)
 void FragTrap:: highFivesGuys()
 {
 	std::cout << RED << "FragTrap " << this->_name << " high fives you!!" << std::endl;
+}
+
+void FragTrap::attack(const std::string& target)
+{
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
+	{
+		std::cout << BLUE << "FragTrap " << this->_name << " attacks " << target << NC << std::endl;
+		this->_energyPoints--;
+	}
+	else
+		std::cout << YELLOW << "FragTrap " << this->_name << " cant attack! No energy or hit points left!" << NC << std::endl;
 }

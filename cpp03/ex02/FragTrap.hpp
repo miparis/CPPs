@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:48 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/01 18:08:30 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/01 18:56:45 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class FragTrap : public ClapTrap
 	FragTrap& operator=(const FragTrap& _copy);
 	~FragTrap(void);
 	void highFivesGuys(void);
+	void attack(const std::string& target);
 };
 
 #endif
