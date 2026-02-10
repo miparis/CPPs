@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:48 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/01 18:56:45 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/10 18:51:18 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ class FragTrap : public ClapTrap
 	FragTrap(const FragTrap& _copy);
 	FragTrap& operator=(const FragTrap& _copy);
 	~FragTrap(void);
+	
 	void highFivesGuys(void);
-	void attack(const std::string& target);
+	//void attack(const std::string& target); -> FragTrap should use the method inherated from ClapTrap
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:45 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/01 18:56:29 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/10 18:52:26 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void FragTrap:: highFivesGuys()
 	std::cout << RED << "FragTrap " << this->_name << " high fives you!!" << std::endl;
 }
 
-void FragTrap::attack(const std::string& target)
+/*void FragTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints > 0 && this->_hitPoints > 0)
 	{
@@ -65,4 +65,4 @@ void FragTrap::attack(const std::string& target)
 	}
 	else
 		std::cout << YELLOW << "FragTrap " << this->_name << " cant attack! No energy or hit points left!" << NC << std::endl;
-}
+}*/

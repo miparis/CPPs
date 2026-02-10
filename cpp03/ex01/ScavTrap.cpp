@@ -6,13 +6,13 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:23:36 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/01 18:45:38 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/10 18:47:45 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap:: ScavTrap()
+ScavTrap:: ScavTrap() : ClapTrap()
 {
 	this->_name = "_default";
 	this->_hitPoints = 100;
