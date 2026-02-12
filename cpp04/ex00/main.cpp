@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:44:44 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 21:45:59 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/12 21:59:54 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ int main()
 
 	std::cout << "\n--- Testing Copy Assignment Operator ---" << std::endl;
 	_animy = _dogy;
+
+	std::cout << "\n--- Testing Wrong Assignment with Cat ---" << std::endl;
+	Cat _caty("_caty");//Doesnt put the name to _caty but it will automatically change to Cat
+	std::cout << _caty.getType() << " " << std::endl;
 
 	std::cout << GREEN << "\n			--- Test provided ---			\n" << NC << std::endl;
 
