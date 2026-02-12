@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/10 19:42:28 by miparis           #+#    #+#             */
+/*   Updated: 2026/02/10 19:57:02 by miparis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef DOG_H
+#define DOG_H
+
+#include "Animal.hpp"
+
+class Dog : public Animal
+{
+	public:
+	Dog();
+	Dog(std::string _type);
+	Dog(const Dog& _copy);
+	Dog& operator=(const Dog& _copy);
+	~Dog();
+	
+	virtual void makeSound() const;
+};
+
+#endif
