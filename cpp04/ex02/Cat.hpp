@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/10 19:23:42 by miparis           #+#    #+#             */
+/*   Updated: 2026/02/21 11:52:29 by miparis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CAT_H
+#define CAT_H
+
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Cat : public Animal
+{
+	public:
+	Cat();
+	Cat(const Cat& _copy);
+	Cat& operator=(const Cat& _copy);
+	~Cat();
+	
+	virtual void makeSound() const;
+	void setIdeas(int i, const std::string& _newIdea);
+	std::string getIdeas(int i) const;
+
+	private:
+	Brain*	brain;
+};
+
+#endif

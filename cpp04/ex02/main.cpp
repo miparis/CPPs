@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:21:20 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/21 12:56:13 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 12:58:58 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 int main()
 {
-	const Animal* j = new Dog();
+	// Animal _animal; -> When trying to just make an animal wew cant as it is abstract
+	const Animal* j = new Dog(); //However, if we instanciate Animal with an specific type we force the inherence 
 	const Animal* i = new Cat();
 	
 	std::cout << GREEN << "\n			--- Solicited test ---				\n" << NC << std::endl;
