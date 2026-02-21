@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 22:03:21 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 23:12:28 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 11:43:31 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Brain& Brain::operator=(const Brain& _copy)
 {
 	if (this != &_copy)
 	{
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 100; i++)//Here we ensure the deep copy, we copy one by one
 			this->ideas[i] = _copy.ideas[i];
 	}
 	std::cout << PURPLE << "(Assign op.) " << "Ideas ideas ideas ..." << NC << std::endl;
@@ -39,3 +39,4 @@ Brain:: ~Brain()
 {
 	std::cout << RED << "(Destruct.) " << " < Brain in invernation >" << NC << std::endl;
 }
+

@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:42:28 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:45:30 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 11:49:29 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Dog : public Animal
 	~Dog();
 	
 	virtual void makeSound() const;
+	void setIdeas(int i, const std::string& _newIdea);
+	std::string getIdeas(int i) const;
 
 	private:
 	Brain* brain; 

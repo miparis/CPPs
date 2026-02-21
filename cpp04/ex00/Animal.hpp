@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:02:20 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/10 19:56:54 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 10:57:03 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class Animal
 {
 	public:
 	Animal();
-	Animal(std::string _type);
 	Animal(const Animal& _copy);
 	Animal& operator=(const Animal& _copy);
+	Animal(std::string _type);// Custom constructor to set the type as wanted
 	virtual ~Animal();
 	
 	virtual void makeSound() const;

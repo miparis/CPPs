@@ -28,7 +28,6 @@ WrongAnimal:: WrongAnimal(const WrongAnimal& _copy)
 {
 	*this = _copy;
 	std::cout << PURPLE << "(Copy) " << "WrongAnimal " << this->type << " ready to play!" << NC << std::endl;
-
 }
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& _copy)
 {

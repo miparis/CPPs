@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:44:44 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:32:58 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 11:00:23 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int main()
 
 	std::cout << "\n--- Testing Copy Assignment Operator ---" << std::endl;
 	_animy = _dogy;
+	std::cout << _animy.getType() << " " << std::endl;
 	
 	std::cout << GREEN << "\n			--- Test provided ---			\n" << NC << std::endl;
 
@@ -43,8 +44,8 @@ int main()
 	j->makeSound();
 	meta->makeSound();
 
-	//WrongCat test
-		std::cout << GREEN << "\n			--- WrongAnimal Test ---			\n" << NC << std::endl;
+	//	WrongCat test
+	std::cout << GREEN << "\n			--- WrongAnimal Test ---			\n" << NC << std::endl;
 	const WrongAnimal* x = new WrongCat();
 	std::cout << x->getType() << " " << std::endl;
 	x->makeSound(); //will output the wrong cat sound!

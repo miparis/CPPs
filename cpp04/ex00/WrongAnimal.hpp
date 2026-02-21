@@ -19,9 +19,9 @@ class WrongAnimal
 {
 	public:
 	WrongAnimal();
-	WrongAnimal(std::string _type);
 	WrongAnimal(const WrongAnimal& _copy);
 	WrongAnimal& operator=(const WrongAnimal& _copy);
+	WrongAnimal(std::string _type);//Custom cosntructor to set the type as wanted
 	virtual ~WrongAnimal();
 	
 	virtual void makeSound() const;

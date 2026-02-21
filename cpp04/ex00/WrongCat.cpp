@@ -18,13 +18,7 @@ WrongCat::WrongCat() : WrongAnimal()
 	this->type = "Wrong Cat";
 	std::cout << PURPLE << "(Def.) " << this->type << " ready to play!" << NC << std::endl;
 }
-WrongCat::WrongCat(std::string _type) : WrongAnimal(_type)
-{
-	/*if (std::string _type != "WrongCat" || &_type = NULL)
-		this->type = "WrongCat";*/
-	this->type = _type;
-	std::cout << PURPLE << "(Assign) " << this->type << " ready to play!" << NC << std::endl;
-}
+
 WrongCat:: WrongCat(const WrongCat& _copy) : WrongAnimal(_copy)
 {
 	*this = _copy;

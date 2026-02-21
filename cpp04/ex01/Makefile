@@ -6,7 +6,7 @@
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 19:01:17 by miparis           #+#    #+#              #
-#    Updated: 2026/02/12 14:47:48 by miparis          ###   ########.fr        #
+#    Updated: 2026/02/21 11:23:55 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS =  main.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 # Define Colors
 GREEN  := \033[1;32m  # Bold Green

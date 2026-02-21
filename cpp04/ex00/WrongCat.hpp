@@ -19,7 +19,6 @@ class WrongCat : public WrongAnimal
 {
 	public:
 	WrongCat();
-	WrongCat(std::string _type);
 	WrongCat(const WrongCat& _copy);
 	WrongCat& operator=(const WrongCat& _copy);
 	~WrongCat();
