@@ -6,7 +6,7 @@
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 19:01:17 by miparis           #+#    #+#              #
-#    Updated: 2026/02/12 14:47:48 by miparis          ###   ########.fr        #
+#    Updated: 2026/02/21 14:28:07 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME)
-	@echo "$(BOLD)$(BLUE)🔣 The farm is ready to play! $(NC)"
+	@echo "$(BOLD)$(BLUE) 🐶🐱 The farm is ready to play! $(NC)"
 
 clean:
 	@$(REMOVE) $(OBJS)
