@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:43:29 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:32:25 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/12 22:46:10 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog() : Animal()
 {
 	this->type = "Dog";
+	this->brain = new Brain();
 	std::cout << PURPLE << "(Def.) " << this->type << " ready to play!" << NC << std::endl;
 }
 

@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 19:23:42 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:32:13 by miparis          ###   ########.fr       */
+/*   Created: 2026/02/10 19:42:28 by miparis           #+#    #+#             */
+/*   Updated: 2026/02/12 22:45:30 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-#define CAT_H
+#ifndef DOG_H
+#define DOG_H
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
 	public:
-	Cat();
-	Cat(const Cat& _copy);
-	Cat& operator=(const Cat& _copy);
-	~Cat();
+	Dog();
+	Dog(const Dog& _copy);
+	Dog& operator=(const Dog& _copy);
+	~Dog();
 	
 	virtual void makeSound() const;
+
+	private:
+	Brain* brain; 
 };
 
 #endif

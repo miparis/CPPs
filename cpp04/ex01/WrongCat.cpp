@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 19:43:29 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:32:25 by miparis          ###   ########.fr       */
+/*   Created: 2026/02/10 19:26:05 by miparis           #+#    #+#             */
+/*   Updated: 2026/02/12 14:31:45 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
+#include "Animal.hpp"
 
-Dog::Dog() : Animal()
+WrongCat::WrongCat() : WrongAnimal()
 {
-	this->type = "Dog";
+	this->type = "Wrong Cat";
 	std::cout << PURPLE << "(Def.) " << this->type << " ready to play!" << NC << std::endl;
 }
-
-Dog:: Dog(const Dog& _copy) : Animal(_copy)
+WrongCat::WrongCat(std::string _type) : WrongAnimal(_type)
+{
+	/*if (std::string _type != "WrongCat" || &_type = NULL)
+		this->type = "WrongCat";*/
+	this->type = _type;
+	std::cout << PURPLE << "(Assign) " << this->type << " ready to play!" << NC << std::endl;
+}
+WrongCat:: WrongCat(const WrongCat& _copy) : WrongAnimal(_copy)
 {
 	*this = _copy;
 	std::cout << PURPLE << "(Copy) " << this->type << " ready to play!" << NC << std::endl;
 }
-Dog& Dog::operator=(const Dog& _copy)
+WrongCat& WrongCat::operator=(const WrongCat& _copy)
 {
 	if (this != &_copy)
-		Animal::operator=(_copy);
-	if (this->type != "Dog")
-            this->type = "Dog";
+		WrongAnimal::operator=(_copy);
 	std::cout << PURPLE << "(Assign op.) " << this->type << " ready to play!" << NC << std::endl;
 	return (*this);
 }
 
-Dog:: ~Dog()
+WrongCat::~WrongCat()
 {
 	std::cout << RED << "(Destruct.) " << this->type << " asleep!" << NC << std::endl;
 }
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << GREEN << "WOF WOF WOF" << std::endl;
+	std::cout << BLUE << "Meeeee?" << std::endl;
 }
