@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WrongCat_H
-#define WrongCat_H
+#pragma once
 
 #include "WrongAnimal.hpp"
 
@@ -26,5 +25,3 @@ class WrongCat : public WrongAnimal
 	
 	virtual void makeSound() const;
 };
-
-#endif

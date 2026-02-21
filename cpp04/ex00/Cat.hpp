@@ -6,12 +6,11 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:23:42 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/12 22:32:13 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 14:11:59 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-#define CAT_H
+#pragma once
 
 #include "Animal.hpp"
 
@@ -25,5 +24,3 @@ class Cat : public Animal
 	
 	virtual void makeSound() const;
 };
-
-#endif

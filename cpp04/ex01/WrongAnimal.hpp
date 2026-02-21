@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WrongAnimal_H
-#define WrongAnimal_H
+#pragma once
 
 #include <iostream>
 
@@ -30,5 +29,3 @@ class WrongAnimal
 	protected:
 	std::string type;
 };
-
-#endif

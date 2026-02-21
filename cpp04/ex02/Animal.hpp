@@ -6,12 +6,11 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:02:20 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/21 13:01:55 by miparis          ###   ########.fr       */
+/*   Updated: 2026/02/21 14:11:45 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#pragma once
 
 #include <iostream>
 
@@ -39,5 +38,3 @@ class Animal
 	protected:
 	std::string type;
 };
-
-#endif
