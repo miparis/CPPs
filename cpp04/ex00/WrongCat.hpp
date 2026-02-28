@@ -22,5 +22,5 @@ class WrongCat : public WrongAnimal
 	WrongCat& operator=(const WrongCat& _copy);
 	~WrongCat();
 	
-	virtual void makeSound() const;
+	//virtual void makeSound() const; -> WronCat should inherite from WrongAnimal
 };

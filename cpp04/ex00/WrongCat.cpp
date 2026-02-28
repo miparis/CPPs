@@ -36,7 +36,3 @@ WrongCat::~WrongCat()
 {
 	std::cout << RED << "(Destruct.) " << this->type << " asleep!" << NC << std::endl;
 }
-void WrongCat::makeSound() const
-{
-	std::cout << BLUE << "Meeeee?" << std::endl;
-}
