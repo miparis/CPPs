@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 12:19:02 by miparis           #+#    #+#             */
-/*   Updated: 2026/02/28 12:24:42 by miparis          ###   ########.fr       */
+/*   Updated: 2026/04/11 19:46:31 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,45 @@ const std::string PURPLE = "\033[0;35m";
 const std::string BOLD   = "\033[1m";
 const std::string NC     = "\033[0m";
 
+#define gradeLowest	150
+#define gradeHighest	1
+
 class Bureaucrat
 {
+	protected:
+	std::string const _name;
+	int _grade;
+
 	public:
 	Bureaucrat();
+	Bureaucrat(std::string _name, int _grade);
 	Bureaucrat(const Bureaucrat& _copy);
-	Bureaucrat operator=(const Bureaucrat& _copy);
+	Bureaucrat& operator=(const Bureaucrat& _copy);
 	virtual ~Bureaucrat();
-	//getName() and getGrade(). one returns the const name the other the value
-	//function increnent & decrement grade
-	//1 (highest possible grade) to 150 (lowest possible grade).
-	//If the grade goes out of range, both functions must throw the same exceptions as the constructor.
-	protected:
-	std::string const name;
-	int grade;
+	
+	const std::string &getName() const;
+	int getGrade() const;
+	
+	void incrementGrade(int _value);
+	void decrementGrade(int _value); 
+	
+	class GradeTooHighException : public std::exception
+	{
+		public:
+			virtual const char* what() const throw()
+			{
+				return ("Bureaucrat grade too high");
+			}
+	};
+
+	class GradeTooLowException : public std::exception
+	{
+		public:
+			virtual const char* what() const throw()
+			{
+				return ("Bureaucrat grade too low");
+			}
+	};
 };
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& _bureaucrat);
