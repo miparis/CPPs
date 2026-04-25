@@ -6,11 +6,12 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/11 18:20:20 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:00:37 by miparis          ###   ########.fr       */
+/*   Updated: 2026/04/25 17:48:14 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 /*								constructors & destructors				      */
 
@@ -79,6 +80,21 @@ void Bureaucrat::decrementGrade(unsigned int _value)
 		std::cout << BLUE << "Bureaucrat has levelled down!" << NC << std::endl;
 	}
 }
+void Bureaucrat::signForm(Form& _form)
+{
+	//we execute a try and catch to check weather the form can be signed
+	try
+	{
+		_form.beSigned(*this);
+		std::cout << "<" << this->getName() << "> signed <" << _form.getName() << ">" << std::endl;
+	}
+	//if there is an exeption, we catch and print the exeption of GradeTooLoow or High	
+	catch (std::exception &e)
+	{
+		std::cout << "<" << this->getName() << "> couldn’t sign <" << _form.getName() << ">" << " because <" << e.what() << ">." << std::endl;	
+	}
+}
+
 /*									operator << 								 */
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& _bureaucrat)
 {

@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 12:19:02 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:00:39 by miparis          ###   ########.fr       */
+/*   Updated: 2026/04/25 17:46:19 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ const std::string NC     = "\033[0m";
 #define gradeLowest	150
 #define gradeHighest	1
 
+class Form;
+
 class Bureaucrat
 {
 	protected:
@@ -42,7 +44,9 @@ class Bureaucrat
 	unsigned int getGrade() const;
 	
 	void incrementGrade(unsigned int _value);
-	void decrementGrade(unsigned int _value); 
+	void decrementGrade(unsigned int _value);
+
+	void signForm(Form& _form);
 	
 	class GradeTooHighException : public std::exception
 	{
