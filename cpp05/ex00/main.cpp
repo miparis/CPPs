@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 12:19:05 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:39:29 by miparis          ###   ########.fr       */
+/*   Updated: 2026/05/26 11:42:21 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	// Test 1: El Burócrata Perfecto
+	/* 							PERFECT BUREAUCRAT						*/	
 	std::cout << "--- Test 1: Normal ---" << std::endl;
 	try {
 		Bureaucrat b1("Hermes Conrad", 42);
@@ -23,7 +23,7 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
-	// Test 2: El que se cree demasiado bueno (Grade too High)
+	/* 							GRADE TOO HIGH FOR BREAUCRAT			 */	
 	std::cout << "\n--- Test 2: Constructor Too High ---" << std::endl;
 	try {
 		Bureaucrat b2("God", 0); 
@@ -32,7 +32,7 @@ int main()
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
 
-	// Test 3: El becario (Grade too Low)
+	/* 							GRADE TOO LOW FOR BREAUCRAT			 */	
 	std::cout << "\n--- Test 3: Constructor Too Low ---" << std::endl;
 	try {
 		Bureaucrat b3("Intern", 151);
@@ -41,14 +41,14 @@ int main()
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
 
-	// Test 4: Forzando el ascenso al límite
+	/*				INCREASING GRADE BREAUCRAT						*/
 	std::cout << "\n--- Test 4: Increment at Limit ---" << std::endl;
 	try {
 		Bureaucrat b4("High Rank", 2);
 		std::cout << b4;
-		b4.incrementGrade(1); // Pasa a 1
+		b4.incrementGrade(1); // to 1
 		std::cout << b4;
-		b4.incrementGrade(1); // Debería lanzar excepción (0 no existe)
+		b4.incrementGrade(1); // Exception (0 doesnt exist)
 	} catch (std::exception &e) {
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
