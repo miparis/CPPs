@@ -6,11 +6,11 @@
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/28 12:13:08 by miparis           #+#    #+#              #
-#    Updated: 2026/05/26 12:38:07 by miparis          ###   ########.fr        #
+#    Updated: 2026/05/26 12:48:37 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = More_forms
+NAME = Intern_works
 
 SRCS =  main.cpp \
 		Bureaucrat.cpp \
@@ -43,7 +43,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME)
-	@echo "$(BOLD)$(BLUE) 👨‍⚖️​ 👨‍⚖️  Lets make some more forms! $(NC)"
+	@echo "$(BOLD)$(BLUE) 👨‍⚖️​  The intern starts to work $(NC)"
 
 clean:
 	@$(REMOVE) $(OBJS)
