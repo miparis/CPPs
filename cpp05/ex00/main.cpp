@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 12:19:05 by miparis           #+#    #+#             */
-/*   Updated: 2026/05/26 11:42:21 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:17:55 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,19 @@ int main()
 		b4.incrementGrade(1); // to 1
 		std::cout << b4;
 		b4.incrementGrade(1); // Exception (0 doesnt exist)
-	} catch (std::exception &e) {
+	}
+	catch (std::exception &e) {
+		std::cerr << "Caught: " << e.what() << std::endl;
+	}
+	/*				DECREASING GRADE BREAUCRAT						*/
+	std::cout << "\n--- Test 5: Decrement grade ---" << std::endl;
+	try {
+		Bureaucrat b5("Lower Rank", 5);
+		std::cout << b5;
+		b5.decrementGrade(4); // to 1
+		std::cout << b5;
+	}
+	catch (std::exception &e) {
 		std::cerr << "Caught: " << e.what() << std::endl;
 	}
 	return (0);

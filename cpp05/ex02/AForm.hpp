@@ -21,13 +21,13 @@ class AForm
 {
 	private:
 	std::string const _name;
-	unsigned int _gradeSign;
-	unsigned int _gradeExec;
+	unsigned int const _gradeSign;
+	unsigned int const _gradeExec;
 	bool _signed;
 
 	public:
 	AForm();
-	AForm(std::string const _name, unsigned int _gradeSign, unsigned int _gradeExec, bool _signed);
+	AForm(std::string const _name, unsigned int const _gradeSign, unsigned int const _gradeExec, bool _signed);
 	AForm(const AForm& _copy);
 	AForm& operator=(const AForm& _copy);
 	virtual ~AForm();

@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 11:28:04 by miparis           #+#    #+#             */
-/*   Updated: 2026/05/26 11:29:53 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:41:07 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     this->checkExecution(executor); 
 
-  	std::cout << GREEN << "<" << this->_target << "> as been pardoned by Zaphod Beeblebrox." << NC << std::endl;
+  	std::cout << GREEN << "<" << this->_target << "> has been pardoned by Zaphod Beeblebrox." << NC << std::endl;
 }

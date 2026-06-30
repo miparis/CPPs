@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 16:52:17 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:42:52 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:24:56 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 class Form
 {
 	private:
-	std::string const _name;
-	unsigned int _gradeSign;
-	unsigned int _gradeExec;
+	std::string const  _name;
+	unsigned int const _gradeSign;
+	unsigned int const _gradeExec;
 	bool _signed;
 
 	public:
 	Form();
-	Form(std::string const _name, unsigned int _gradeSign, unsigned int _gradeExec, bool _signed);
+	Form(std::string const _name, unsigned int const _gradeSign, unsigned int const _gradeExec, bool _signed);
 	Form(const Form& _copy);
 	Form& operator=(const Form& _copy);
 	virtual ~Form();

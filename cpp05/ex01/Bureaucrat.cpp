@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/11 18:20:20 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:48:14 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:35:44 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void Bureaucrat::decrementGrade(unsigned int _value)
 }
 void Bureaucrat::signForm(Form& _form)
 {
-	//we execute a try and catch to check weather the form can be signed
+	//we execute a try and catch to check wether the form can be signed
 	try
 	{
 		_form.beSigned(*this);

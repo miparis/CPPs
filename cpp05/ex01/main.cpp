@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 12:19:05 by miparis           #+#    #+#             */
-/*   Updated: 2026/05/26 11:40:07 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:34:50 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int main()
 		Form f_medium("Budget Approval", 70, 70, false);
 
 		std::cout << "Trying manual signature..." << std::endl;
-		f_medium.beSigned(b_medium); // Should trow exception
+		f_medium.beSigned(b_medium); // Should trow exception as burecrat doesnt have the grade high enough to sign
 	} catch (std::exception &e) {
 		std::cerr << "Manual catch: " << e.what() << std::endl;
 	}

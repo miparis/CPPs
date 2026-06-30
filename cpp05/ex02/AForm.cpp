@@ -18,7 +18,7 @@ AForm::AForm() : _name("_defaultAForm"), _gradeSign(gradeLowest), _gradeExec(gra
 {
 	std::cout << PURPLE << "(Def.) " << "AForm created" << NC << std::endl;
 }
-AForm:: AForm(std::string const _name, unsigned int _gradeSign, unsigned int _gradeExec, bool _signed): _name(_name), _signed(_signed)
+AForm:: AForm(std::string const _name, unsigned int const _gradeSign, unsigned int const _gradeExec, bool _signed): _name(_name), _signed(_signed), _gradeExec(_gradeExec), _gradeSign(_gradeSign)
 {
 	if (_gradeSign > gradeLowest)
 		throw AForm::GradeTooLowException();
@@ -28,22 +28,19 @@ AForm:: AForm(std::string const _name, unsigned int _gradeSign, unsigned int _gr
 		throw AForm::GradeTooLowException();
 	if (_gradeExec < gradeHighest)
 		throw AForm::GradeTooHighException();
-	this->_gradeExec = _gradeExec;
-	this->_gradeSign = _gradeSign;
 	std::cout << PURPLE << "(Custom) " << "AForm created" << NC << std::endl;
 }
-AForm:: AForm(const AForm& _copy): _name(_copy._name), _signed(_copy._signed)
+
+AForm:: AForm(const AForm& _copy): _name(_copy._name), _gradeExec(_copy._gradeExec), _gradeSign(_copy._gradeSign)
 {
 	*this = _copy;
 	std::cout << PURPLE << "(Copy) " << "AForm created" << NC << std::endl;
 }
-AForm& AForm:: operator=(const AForm& _copy)
+
+AForm& AForm::operator=(const AForm& _copy)
 {
 	if (this != &_copy)
-	{
-		this->_gradeExec = _copy._gradeExec;
-		this->_gradeSign = _copy._gradeSign;
-	}
+		this->_signed = _copy._signed;
 	std::cout << PURPLE << "(Assign.) " << "AForm created" << NC << std::endl;
 	return (*this);
 }

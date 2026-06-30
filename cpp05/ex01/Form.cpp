@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 17:06:37 by miparis           #+#    #+#             */
-/*   Updated: 2026/04/25 17:26:01 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/04 11:33:31 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Form::Form() : _name("_defaultForm"), _gradeSign(gradeLowest), _gradeExec(gradeL
 {
 	std::cout << PURPLE << "(Def.) " << "Form created" << NC << std::endl;
 }
-Form:: Form(std::string const _name, unsigned int _gradeSign, unsigned int _gradeExec, bool _signed): _name(_name), _signed(_signed)
+Form:: Form(std::string const _name, unsigned int _gradeSign, unsigned int _gradeExec, bool _signed): _name(_name), _signed(_signed), _gradeExec(_gradeExec), _gradeSign(_gradeSign)
 {
 	if (_gradeSign > gradeLowest)
 		throw Form::GradeTooLowException();
@@ -28,11 +28,9 @@ Form:: Form(std::string const _name, unsigned int _gradeSign, unsigned int _grad
 		throw Form::GradeTooLowException();
 	if (_gradeExec < gradeHighest)
 		throw Form::GradeTooHighException();
-	this->_gradeExec = _gradeExec;
-	this->_gradeSign = _gradeSign;
 	std::cout << PURPLE << "(Custom) " << "Form created" << NC << std::endl;
 }
-Form:: Form(const Form& _copy): _name(_copy._name), _signed(_copy._signed)
+Form:: Form(const Form& _copy): _name(_copy._name), _signed(_copy._signed), _gradeExec(_gradeExec), _gradeSign(_gradeSign)
 {
 	*this = _copy;
 	std::cout << PURPLE << "(Copy) " << "Form created" << NC << std::endl;
@@ -41,8 +39,7 @@ Form& Form:: operator=(const Form& _copy)
 {
 	if (this != &_copy)
 	{
-		this->_gradeExec = _copy._gradeExec;
-		this->_gradeSign = _copy._gradeSign;
+		this->_signed = _copy._signed;
 	}
 	std::cout << PURPLE << "(Assign.) " << "Form created" << NC << std::endl;
 	return (*this);
@@ -89,6 +86,6 @@ void Form::beSigned(const Bureaucrat& _bureaucrat)
 
 std::ostream& operator<<(std::ostream& os, const Form& _form)
 {
-	os << "<" << _form.getName() << "form state: " << _form.getStatus() << ">, form grade to sign <" << _form.getSignGrade() << ">, form grade to execute <" << _form.getExecGrade() << ">." << std::endl;
+	os << "<" << _form.getName() << " form state: " << _form.getStatus() << ">, form grade to sign <" << _form.getSignGrade() << ">, form grade to execute <" << _form.getExecGrade() << ">." << std::endl;
     return (os);
 }
