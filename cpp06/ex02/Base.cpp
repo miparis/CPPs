@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 11:28:18 by miparis           #+#    #+#             */
-/*   Updated: 2026/06/16 12:20:56 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:28:29 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,24 @@ void identify(Base& p)
 {
 	try
 	{
-		dynamic_cast<A&>(p);
+		A& a = dynamic_cast<A&>(p);
+		(void) a;
 		std::cout <<  GREEN << "A" << NC << std::endl;
 		return ;
 	}
 	catch(const std::exception& e){}
 	try
 	{
-		dynamic_cast<B&>(p);
+		B& b = dynamic_cast<B&>(p);
+		(void) b;
 		std::cout <<  BLUE << "B" << NC << std::endl;
 		return ;
 	}
 	catch(const std::exception& e){}
 	try
 	{
-		dynamic_cast<C&>(p);
+		C& c = dynamic_cast<C&>(p);
+		(void) c;
 		std::cout <<  PURPLE << "C" << NC << std::endl;
 		return ;
 	}

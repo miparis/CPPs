@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 13:09:29 by miparis           #+#    #+#             */
-/*   Updated: 2026/06/12 11:14:21 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:09:24 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ type	ScalarConverter::parseLiteral(const std::string& _literal)
 	type _pseudo = searchPseudo(_literal);
 	if (_pseudo != NONE)
 		return (_pseudo);
-
 	if (isChar(_literal))
 		return (CHAR);
 	if (isInt(_literal))
@@ -64,12 +63,12 @@ type	ScalarConverter::parseLiteral(const std::string& _literal)
 type	 ScalarConverter::searchPseudo(const std::string _literal)
 {
 	std::string pseudoStrings[8] = { "nan", "+inf", "-inf", "inf", "nanf", "+inff", "-inff", "inff" };
-    type  pseudoEnums[8]   = {T_NAN, P_INFF, N_INFF, T_INF, T_NANF, P_INF, N_INF, T_INFF};
+    type  pseudoEnums[8]   = {T_NAN, P_INFF, N_INF, T_INF, T_NANF, P_INFF, N_INFF, T_INFF};
 
 	for (int i = 0; i < 8; i++)
 	{
 		if (_literal == pseudoStrings[i])
-			return pseudoEnums[i];
+			return (pseudoEnums[i]);
 	}
 	return (NONE);
 }
@@ -99,13 +98,13 @@ bool	ScalarConverter:: isInt(const std::string _literal)
 		return (false);
 	while (i < _literal.length())
 	{
-		if (_literal[i] <= '0' && _literal[i] >= '9')
+		if (!std::isdigit(_literal[i]))
 			return (false);
 		i = i + 1;
 	}
-	if (sign == 1)
-		return (true);
-    return (false);
+	if (sign > 1)
+		return (false);
+    return (true);
 }
 
 bool	ScalarConverter::isDouble(const std::string _literal) 
@@ -124,13 +123,13 @@ bool	ScalarConverter::isDouble(const std::string _literal)
 	{
 		if (_literal[i] == '.')
 			point = point + 1;
-		if (_literal[i] >= '0' && _literal[i] <= '9')
+		else if (_literal[i] >= '0' && _literal[i] <= '9')
 			digit = digit + 1;
 		else
 			return (false);
 		i++;
 	}
-	if (point == 1 && digit > 0 && sign == 1)
+	if (point == 1 && digit > 0 && sign <= 1)
 		return (true);
 	return (false);
 }
@@ -156,13 +155,13 @@ bool	ScalarConverter::isFloat(const std::string _literal)
 	{
 		if (_literal[i] == '.')
 			point = point + 1;
-		if (_literal[i] >= '0' && _literal[i] <= '9')
+		else if (_literal[i] >= '0' && _literal[i] <= '9')
 			digit = digit + 1;
 		else
 			return (false);
 		i++;
 	}
-	if (point == 1 && digit > 0 && sign == 1)
+	if (point == 1 && digit > 0 && sign <= 1)
 		return (true);
 	return (false);
 }
@@ -306,7 +305,7 @@ void	ScalarConverter::printFromDouble(double d)
 		int	c = static_cast<char>(d);
 		std::cout << "char: '" << c << "'" << std::endl;
 	}
-	if (d < std::numeric_limits<int>::min() || d < std::numeric_limits<int>::max())
+	if (d < std::numeric_limits<int>::min() || d > std::numeric_limits<int>::max())
 		std::cout << "int: impossible" << std::endl;
 	else
 	{	int	i = static_cast<int>(d);

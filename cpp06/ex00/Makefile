@@ -6,12 +6,12 @@
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/08 13:00:56 by miparis           #+#    #+#              #
-#    Updated: 2026/06/12 10:04:31 by miparis          ###   ########.fr        #
+#    Updated: 2026/06/30 11:32:25 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = ScalarConverter
+NAME = convert
 
 SRCS =  main.cpp \
 		ScalarConverter.cpp

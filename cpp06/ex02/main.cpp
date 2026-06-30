@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 11:57:04 by miparis           #+#    #+#             */
-/*   Updated: 2026/06/16 12:22:18 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:31:08 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int main()
 	identify(misteryObj1);
 
 	std::cout << "Identify (reference) = ";
-	identify(*misteryObj1); // El asterisco desreferencia el puntero para pasar el objeto real
+	identify(*misteryObj1); // As we need to pass the real object by reference, we dereference the pointer using the * again
 
-	delete (misteryObj1); // ¡No te olvides de limpiar!
+	delete (misteryObj1); // as we use new in genereta, we ensure to clean after
 
 	std::cout << "\n--- TEST 2 ---" << std::endl;
 	Base* misteryObj2 = generate();

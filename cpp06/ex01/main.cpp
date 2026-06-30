@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 10:38:09 by miparis           #+#    #+#             */
-/*   Updated: 2026/06/16 11:19:56 by miparis          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:18:32 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int main()
 {
 	//Original values
     Data _originalData;
-    _originalData._value = 42;
-    _originalData._name = "Marvin";
+    _originalData._value = 84;
+    _originalData._name = "Miranda";
 
     std::cout << BLUE << "--- ORIGINAL ---" << std::endl << GREEN << "Address: " << &_originalData << std::endl << "ID: " << _originalData._value << " | Name: " << _originalData._name << NC << std::endl;
 
