@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/07/06 11:34:58 by miparis           #+#    #+#              #
-#    Updated: 2026/07/06 12:49:19 by miparis          ###   ########.fr        #
+#    Created: 2026/07/06 12:11:26 by miparis           #+#    #+#              #
+#    Updated: 2026/07/06 12:49:07 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Whatever
+NAME = iter
 
 SRCS =  main.cpp 
 		
@@ -37,7 +37,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes $(OBJS) -o $(NAME)
-	@echo "$(BOLD)$(BLUE) Whatever working $(NC)"
+	@echo "$(BOLD)$(BLUE) Iter working $(NC)"
 
 %.o: %.cpp
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes -c $< -o $@
