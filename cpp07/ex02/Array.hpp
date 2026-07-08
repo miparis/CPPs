@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/07 12:54:39 by miparis           #+#    #+#             */
-/*   Updated: 2026/07/07 15:55:33 by miparis          ###   ########.fr       */
+/*   Updated: 2026/07/08 11:20:46 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <exception>
+#include <cstdlib>
 
 const std::string GREEN  = "\033[0;32m";
 const std::string YELLOW = "\033[0;33m";
