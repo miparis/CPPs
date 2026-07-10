@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 12:11:42 by miparis           #+#    #+#             */
-/*   Updated: 2026/07/06 12:54:17 by miparis          ###   ########.fr       */
+/*   Updated: 2026/07/10 17:20:27 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,28 @@ const std::string BOLD   = "\033[1m";
 const std::string NC     = "\033[0m";
 
 /*
-Here the function can change the array as its not const
+Here the function passed can change the array as its not const
 */
 template <typename T>
-void iter(T* reference, size_t lenght, void (*f)(T&))
+void iter(T* adress, const size_t length, void (*f)(T&))
 {
 	//(*f) = reference to function (T&) = array
-	for (size_t i = 0; i < lenght; i++)
-		f(reference[i]);
+	for (size_t i = 0; i < length; i++)
+		f(adress[i]);
 }
 /*
-Overload of the iter function that says "hey I am not going to change the reference to the array"
+Overload of the iter function that says "hey I am not going to change the array"
 Here the function will be of reading only
 */
 template <typename T>
-void iter(const T* reference, size_t lenght, void (*f)(const T&))
+void iter(const T* adress, const size_t length, void (*f)(const T&))
 {
-	for (size_t i = 0; i < lenght; i++)
-		f(reference[i]);
+	for (size_t i = 0; i < length; i++)
+		f(adress[i]);
+}
+/*------- The following function was made for testing a function template in iter -----*/
+template <typename T>
+void printElement(const T& element)
+{
+    std::cout << PURPLE << element << " " << NC << std::endl;;
 }

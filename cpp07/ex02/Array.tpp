@@ -6,14 +6,14 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/07 13:01:00 by miparis           #+#    #+#             */
-/*   Updated: 2026/07/07 16:21:31 by miparis          ###   ########.fr       */
+/*   Updated: 2026/07/10 16:31:03 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
 template <typename T>
-Array<T> :: Array() : _size(0), _array(new T[0]()) 
+Array<T> :: Array() : _size(0), _array(new T[0]()) //construction of the type empty
 {}
 
 template <typename T>
@@ -56,6 +56,7 @@ unsigned int Array<T> :: size() const
 	return (_size);
 }
 
+//overload of the [] operaator to throw the exception
 template <typename T>
 T& Array<T>:: operator[](unsigned int _index)
 {

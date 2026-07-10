@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 11:32:48 by miparis           #+#    #+#             */
-/*   Updated: 2026/07/06 12:02:28 by miparis          ###   ########.fr       */
+/*   Updated: 2026/07/10 16:06:00 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ T min(T firstArg, T secondArg)
 {
 	if (firstArg < secondArg)
 		return (firstArg);
-	else if (secondArg < firstArg)
-		return (secondArg);
 	return (secondArg);
 }
 template <typename T>
@@ -43,7 +41,5 @@ T max(T firstArg,T secondArg)
 {
 	if (firstArg > secondArg)
 		return (firstArg);
-	else if (secondArg > firstArg)
-		return (secondArg);
 	return (secondArg);	
 }
