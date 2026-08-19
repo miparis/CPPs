@@ -19,9 +19,7 @@ The curriculum is divided into 10 modules, each unlocking a new layer of the C++
 | **CPP 05** | Exceptions | `try`/`catch` blocks, standard and custom exception handling. |
 | **CPP 06** | Type Casting | `static_cast`, `dynamic_cast`, `const_cast`, `reinterpret_cast`. |
 | **CPP 07** | Templates | Function templates, class templates, generic programming. |
-| **CPP 08** | STL Fundamentals | Templated containers, iterators, and the `<algorithm>` header.
-
- |
+| **CPP 08** | STL Fundamentals | Templated containers, iterators, and the `<algorithm>` header. |
 | **CPP 09** | STL Advanced | Complex data processing and algorithmic efficiency using the STL. |
 
 ---
