@@ -4,6 +4,10 @@
 Welcome to the complete collection of my C++ modules. This repository documents the journey from basic C-like syntax and fundamental Object-Oriented Programming concepts to the mastery of templates and the Standard Template Library (STL). All projects are strictly written and compiled under the **C++98 standard**.
 
 ---
+### 📖 Conceptual Guide
+Throughout this core, I have compiled a comprehensive [Concept Documentation][https://miparis.gitbook.io/42bymiparis/cpps-modules/]. This guide breaks down the theoretical hurdles of C++, from the Orthodox Canonical Form to the intricacies of the STL, Container Adapters, and template instantiation. It serves as my personal knowledge base and a defense preparation tool.
+
+---
 
 ### 📚 Curriculum Breakdown
 
