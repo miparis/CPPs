@@ -5,7 +5,7 @@ Welcome to the complete collection of my C++ modules. This repository documents 
 
 ---
 ### 📖 Conceptual Guide
-Throughout this core, I have compiled a comprehensive [Concept Documentation][https://miparis.gitbook.io/42bymiparis/cpps-modules/]. This guide breaks down the theoretical hurdles of C++, from the Orthodox Canonical Form to the intricacies of the STL, Container Adapters, and template instantiation. It serves as my personal knowledge base and a defense preparation tool.
+Throughout this core, I have compiled a comprehensive [Concept Documentation](https://miparis.gitbook.io/42bymiparis/cpps-modules/). This guide breaks down the theoretical hurdles of C++, from the Orthodox Canonical Form to the intricacies of the STL, Container Adapters, and template instantiation. It serves as my personal knowledge base and a defense preparation tool. Check it out!
 
 ---
 
