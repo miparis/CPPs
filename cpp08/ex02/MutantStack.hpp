@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 13:04:03 by miparis           #+#    #+#             */
-/*   Updated: 2026/08/05 14:23:03 by miparis          ###   ########.fr       */
+/*   Updated: 2026/08/19 11:57:31 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,14 @@ class MutantStack : public std::stack <T>
 	MutantStack& operator=(const MutantStack& _copy);
 	~MutantStack();
 	
-	// Tenemos que definir qué es un "iterator" para nuestra clase
-	typedef typename std::stack<T>::container_type::iterator iterator;
+	// As a stack doesnt have iterators, 
+	//Container_type: represent the container type used at compilation
+	// (deque, list, vector,etc) and returns its iterator.
+	//This allowes us to use the class with different types of containers
+	typedef typename std::stack<T>::container_type::iterator _iterator;
 	
-	iterator begin();
-	iterator end();
+	_iterator begin();
+	_iterator end();
 };
 
 #include "MutantStack.tpp"

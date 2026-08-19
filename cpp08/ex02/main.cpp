@@ -6,7 +6,7 @@
 /*   By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 13:03:24 by miparis           #+#    #+#             */
-/*   Updated: 2026/08/05 14:54:28 by miparis          ###   ########.fr       */
+/*   Updated: 2026/08/19 12:16:17 by miparis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,30 @@
 int main()
 {
 	std::cout << BLUE << "----- Test with Mutant Stack ------ " << NC << std::endl;
-	MutantStack<int>
-	mstack;
+	
+	MutantStack<int>  mstack;
+
 	mstack.push(5);
 	mstack.push(17);
+
 	std::cout << "Top value = " << mstack.top() << std::endl;
+	
 	mstack.pop();
+	
 	std::cout << "Size = "<< mstack.size() << std::endl;
+	
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
 	//[...]
 	mstack.push(0);
-	MutantStack<int>::iterator it = mstack.begin();
-	MutantStack<int>::iterator ite = mstack.end();
+	
+	MutantStack<int>::_iterator it = mstack.begin();
+	MutantStack<int>::_iterator ite = mstack.end();
+	
 	++it;
 	--it;
+
 	std::cout << "Values of stack: " << std::endl;
 	while (it != ite)
 	{
