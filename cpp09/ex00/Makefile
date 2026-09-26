@@ -27,7 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes $(OBJS) -o $(NAME)
-	@echo "$(BOLD)$(BLUE) Mutantstack compiled correctly $(NC)"
+	@echo "$(BOLD)$(BLUE) btc compiled correctly $(NC)"
 
 %.o: %.cpp
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes -c $< -o $@

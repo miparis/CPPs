@@ -1,8 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include <map>
 #include <string>
+#include <map>
+#include <fstream>
+#include <cstdlib>
 
 const std::string GREEN  = "\033[0;32m";
 const std::string YELLOW = "\033[0;33m";
@@ -20,10 +22,11 @@ class BitcoinExchange
 	BitcoinExchange& operator=(const BitcoinExchange &copy);
 	~BitcoinExchange();
 
-	void check_file(const std::string& file);
-	void insertData(int argc);
-	std::ostream& pairValues(int file, int dataBase);
+	void chargeData(const std::string& data_file);
+	void checkFile(const std::string& input_file);
 
 	private:
 	std::map<std::string, float> dates_values;
+	bool isValidDate(const std::string& date) const;
+    void calculate(const std::string& date, float value);
 };
