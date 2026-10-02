@@ -5,27 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/09/26 12:06:45 by miparis           #+#    #+#              #
-#    Updated: 2026/09/26 17:46:21 by miparis          ###   ########.fr        #
+#    Created: 2026/09/26 17:46:26 by miparis           #+#    #+#              #
+#    Updated: 2026/09/26 17:46:55 by miparis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: miparis <miparis@student.42madrid.com>     +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/09/26 12:00:29 by miparis           #+#    #+#              #
-#    Updated: 2026/09/26 12:00:30 by miparis          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
-NAME = RPN
+NAME = PmergeMe
 
 SRCS =  main.cpp \
-		RPN.cpp
+		PmergeMe.cpp
 		
 # Define Colors
 GREEN  := \033[1;32m  # Bold Green
@@ -50,7 +39,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes $(OBJS) -o $(NAME)
-	@echo "$(BOLD)$(BLUE) RPN compiled correctly $(NC)"
+	@echo "$(BOLD)$(BLUE) PmergeMe compiled correctly $(NC)"
 
 %.o: %.cpp
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -Iincludes -c $< -o $@
